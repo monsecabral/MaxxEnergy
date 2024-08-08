@@ -65,70 +65,73 @@
       </nav>
 <main>
 <!-- Sign in and register page starts here -->
-<div class="container" id="container">
-  <div class="form-container sign-up-container">
-      <form action="#">
-          <h1>Create Account</h1>
-          <div class="social-container">
-              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <span>or use your email for registration</span>
-          <div class="infield">
-              <input type="text" placeholder="Name" />
-              <label></label>
-          </div>
-          <div class="infield">
-              <input type="email" placeholder="Email" name="email"/>
-              <label></label>
-          </div>
-          <div class="infield">
-              <input type="password" placeholder="Password" />
-              <label></label>
-          </div>
-          <button>Sign Up</button>
-      </form>
-  </div>
-  <div class="form-container sign-in-container">
-      <form action="#">
-          <h1>Sign in</h1>
-          <div class="social-container">
-              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <span>or use your account</span>
-          <div class="infield">
-              <input type="email" placeholder="Email" name="email"/>
-              <label></label>
-          </div>
-          <div class="infield">
-              <input type="password" placeholder="Password" />
-              <label></label>
-          </div>
-          <a href="#" class="forgot">Forgot your password?</a>
-          <button>Sign In</button>
-      </form>
-  </div>
-  <div class="overlay-container" id="overlayCon">
-      <div class="overlay">
-          <div class="overlay-panel overlay-left">
-              <h1>Welcome Back!</h1>
-              <p>To access your Maxx Energy Information login here!</p>
-              <button>Sign In</button>
-          </div>
-          <div class="overlay-panel overlay-right">
-              <h1>Hello, Friend!</h1>
-              <p>Register here for your Maxx Energy info!</p>
-              <button>Sign Up</button>
-          </div>
-      </div>
-      <button id="overlayBtn"></button>
-  </div>
-</div>
+<div class="login-page">
+  <div class="box">
+    <div class="left">
+      <h3>Create Account</h3>
+      <button type="button" class="register-btn">Register</button>
+    </div>
+    <div class="right">
+      <h3>Have an Account ?</h3>
+      <button type="button" class="login-btn">Login</button>
+    </div>
+    <div class="form">
+       <!-- Login form Start -->
+       <div class="login-form">
+         <h3>Log In</h3>
+         <div class="form-group">
+           <input type="text" placeholder="Email Address*" class="form-control">
+         </div>
+         <div class="form-group">
+           <input type="password" placeholder="Password*" class="form-control">
+         </div>
+         <div class="form-group">
+           <label>
+             <input type="checkbox"> Remember Me
+           </label>
+         </div>
+         <button type="button" class="submit-btn">Login</button>
+         <p><a href="#" class="register-btn">Register</a> | <a href="#" class="lost-pass-btn">Lost Your Password ?</a></p>
+       </div>
+       <!-- Login form End -->
 
+            <!-- Register form Start -->
+       <div class="register-form form-hidden">
+         <h3>Register</h3>
+         <div class="form-group">
+           <input type="text" placeholder="First Name*" class="form-control">
+         </div>
+         <div class="form-group">
+           <input type="text" placeholder="Last Name*" class="form-control">
+         </div>
+         <div class="form-group">
+           <input type="text" placeholder="Email Address*" class="form-control">
+         </div>
+         <div class="form-group">
+           <input type="password" placeholder="Password*" class="form-control">
+         </div>
+         
+         <button type="button" class="submit-btn">Register</button>
+         <p><a href="#" class="login-btn">Login</a> | <a href="#" class="lost-pass-btn">Lost Your Password ?</a></p>
+       </div>
+       <!-- Register form End -->
 
+       <!-- Lost Password form Start -->
+       <div class="lost-password-form form-hidden">
+         <h3>Lost Your Password ?</h3>
+         <h5>You will receive a link to create a new password via email.</h5>
+         
+         <div class="form-group">
+           <input type="text" placeholder="Email Address*" class="form-control">
+         </div>
+         
+         
+         <button type="button" class="submit-btn">Reset Password</button>
+         <p><a href="#" class="login-btn">Login</a> | <a href="#" class="register-btn">Register</a></p>
+       </div>
+       <!-- Lost Password form End -->
+
+    </div>
 
 
     </main>
