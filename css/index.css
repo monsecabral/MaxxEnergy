@@ -6,6 +6,7 @@
   color: #151313; 
   padding: 20px;
   text-align: center;
+  position:relative;
   
 }
 
@@ -60,3 +61,5 @@
 .hero-text {
   max-width: 800px;
 }
+
+
