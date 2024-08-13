@@ -1,5 +1,6 @@
 "use strict"
 
+// This is what makes the forms switch DO NOT TOUCH. 
 
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
@@ -16,88 +17,82 @@ signInButton.addEventListener('click', () => {
 
 // -------------------------------------------------------------------------------------------------------------------------------------
 
-// api data starts here i think???
+// js for login and registration data starts here
 
-// Get the form elements
-const signUpForm = document.querySelector('.sign-up-container form');
-const signInForm = document.querySelector('.sign-in-container form');
-const overlay = document.querySelector('.overlay-container .overlay');
+document.addEventListener('DOMContentLoaded', () => {
+  const signUpForm = document.getElementById('signUpForm');
+  const signInForm = document.getElementById('signInForm');
+  const signUpMessage = document.getElementById('signUpMessage');
+  const signInMessage = document.getElementById('signInMessage');
+  
+  signUpForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('signUpName').value;
+      const email = document.getElementById('signUpEmail').value;
+      const password = document.getElementById('signUpPassword').value;
 
-// Add event listeners to the forms
-signUpForm.addEventListener('submit', handleSignUp);
-signInForm.addEventListener('submit', handleSignIn);
+      try {
+          const response = await fetch('http://167.71.252.138/server-info.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams({ action: 'register', name, email, password })
+          });
 
-// Function to handle sign up
-function handleSignUp(event) {
-  event.preventDefault();
-  const name = document.querySelector('.sign-up-container input[type="text"]').value;
-  const email = document.querySelector('.sign-up-container input[type="email"]').value;
-  const password = document.querySelector('.sign-up-container input[type="password"]').value;
+          const result = await response.json();
 
-  // Validate the form fields
-  if (name === '' || email === '' || password === '') {
-    alert('Please fill in all fields');
-    return;
-  }
-
-  // Send a POST request to the server to register the user
-  fetch('http://167.71.252.138/register.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: `name=${name}&email=${email}&password=${password}`
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.success) {
-      alert('Registration successful!');
-      // Redirect to a data page (you would replace this with your actual redirect logic)
-      window.location.href = 'data-page.html';
-    } else {
-      alert('Registration failed: ' + data.error);
-    }
-  })
-  .catch(error => {
-    console.error('Error registering user:', error);
+          if (response.ok && result.success) {
+              signUpMessage.textContent = 'Registration successful! Redirecting...';
+              signUpMessage.style.color = 'green';
+              setTimeout(() => {
+                  window.location.href = 'data.html'; // Update this URL as needed
+              }, 2000); // Delay for 2 seconds
+          } else {
+              signUpMessage.textContent = result.message || 'Registration failed.';
+              signUpMessage.style.color = 'red';
+          }
+      } catch (error) {
+          console.error('Error during registration:', error);
+          signUpMessage.textContent = 'An error occurred.';
+          signUpMessage.style.color = 'red';
+      }
   });
-}
 
-// Function to handle sign in
-function handleSignIn(event) {
-  event.preventDefault();
-  const email = document.querySelector('.sign-in-container input[type="email"]').value;
-  const password = document.querySelector('.sign-in-container input[type="password"]').value;
+  signInForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('signInEmail').value;
+      const password = document.getElementById('signInPassword').value;
 
-  // Send a POST request to the server to login the user
-  fetch('http://167.71.252.138/login.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: `email=${email}&password=${password}`
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.success) {
-      alert('Login successful!');
-      // Redirect to a data page (you would replace this with your actual redirect logic)
-      window.location.href = 'data-page.html';
-    } else {
-      alert('Login failed: ' + data.error);
-    }
-  })
-  .catch(error => {
-    console.error('Error logging in user:', error);
+      try {
+          const response = await fetch('http://167.71.252.138/server-info.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams({ action: 'login', email, password })
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.success) {
+              signInMessage.textContent = 'Login successful! Redirecting...';
+              signInMessage.style.color = 'green';
+              setTimeout(() => {
+                  window.location.href = 'data.html'; // Update this URL as needed
+              }, 2000); // Delay for 2 seconds
+          } else {
+              signInMessage.textContent = result.message || 'Login failed.';
+              signInMessage.style.color = 'red';
+          }
+      } catch (error) {
+          console.error('Error during login:', error);
+          signInMessage.textContent = 'An error occurred.';
+          signInMessage.style.color = 'red';
+      }
   });
-}
 
-// Add event listeners to the overlay buttons
-document.querySelector('#signUp').addEventListener('click', () => {
-  overlay.classList.add('right-panel-active');
+  document.getElementById('signIn').addEventListener('click', () => {
+      document.querySelector('.overlay').style.transform = 'translateX(-50%)';
+  });
+
+  document.getElementById('signUp').addEventListener('click', () => {
+      document.querySelector('.overlay').style.transform = 'translateX(0)';
+  });
 });
-
-document.querySelector('#signIn').addEventListener('click', () => {
-  overlay.classList.remove('right-panel-active');
-});
-
