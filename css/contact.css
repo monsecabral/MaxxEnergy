@@ -53,3 +53,32 @@ input[type="submit"]:hover {
   margin-top: 10px;
   font-size: 12px;
 }
+
+/* Footer */
+
+#footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #808080;
+  color: #151313;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-media-links a {
+  margin: 0 10px;
+}
+
+.social-media-links img {
+  width: 40px;
+  height: 40px;
+}
