@@ -1,11 +1,16 @@
 /* FAQ Accordion */
 
+h1 {
+  padding-bottom: 20px;
+}
+
 body {
   background-color: #f2f2f2;
 }
 
 .container {
   justify-content: center;
+  padding-bottom: 75px;
 }
 
 .container h1 {
@@ -57,7 +62,7 @@ details[open] div {
   color: #151313;
   padding: 20px;
   text-align: center;
-  position: fixed;
+  position: relative;
 
 }
 
