@@ -1,5 +1,6 @@
 body {
   background-color: #f2f2f2;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 /* Featurette */
@@ -31,11 +32,11 @@ body {
     }
   }
   
-  @media (min-width: 62em) {
+  /* @media (min-width: 62em) {
     .featurette-heading {
       margin-top: 7rem;
     }
-  }
+  } */
   
 
 /* Footer */
