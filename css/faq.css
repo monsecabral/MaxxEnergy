@@ -1,0 +1,79 @@
+/* FAQ Accordion */
+
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  justify-content: center;
+}
+
+.container h1 {
+  color: #000000;
+  text-align: center;
+}
+
+details {
+  background-color: #cacaca;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+summary {
+  padding: .5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: height 1s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+  content: "\002B";
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: .5em;
+}
+
+details[open] summary:after {
+  content: "\00D7";
+}
+
+details[open] div {
+  padding: .5em 1em;
+}
+
+/* Footer */
+
+#footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #808080;
+  color: #151313;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+
+}
+
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-media-links a {
+  margin: 0 10px;
+}
+
+.social-media-links img {
+  width: 40px;
+  height: 40px;
+}
