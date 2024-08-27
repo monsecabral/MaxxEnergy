@@ -1,18 +1,11 @@
-body {
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-
 /* navbar starts here */
 /* to ensure the navbar stays at the top */
 header {
 	position: fixed;
-	/* Or 'sticky' based on your needs */
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	/* Ensures it stays on top of other content */
-
 }
 /* navbar ends here */
 
@@ -66,7 +59,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 	height: 100vh;
 	margin: -20px 0 50px;
 }
