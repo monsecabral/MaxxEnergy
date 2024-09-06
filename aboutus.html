@@ -49,38 +49,46 @@
 
 
     <!-- Jumbotron -->
-    <div class="my-5">
-        <div class="p-5 text-center bg-body-tertiary">
-            <div class="container py-5">
-                <h1 class="text-body-emphasis">About Us</h1>
-                <p class="col-lg-8 mx-auto lead">
-                    <!-- This takes the basic jumbotron above and makes its background edge-to-edge with a
-                    <code>.container</code> inside to align content. Similar to above, it's been recreated with built-in
-                    grid and utility classes. -->
-                </p>
-                <button class="btn btn-primary px-5 mb-5" type="button">
-                    Call to action
-                </button>
-            </div>
+    <!-- <div class="hero-image" img src="images/PowerPlantLandscape.jpg">
+        <div class="hero-text">
+            <h1>I am John Doe</h1>
+            <p>And I'm a Photographer</p>
+            <button>Hire me</button>
         </div>
+    </div> -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">     
+        <img src="images/PowerPlantLandscape.jpg" class="img-fluid" alt="PowerPlantLandscape">
+        <div class="color-overlay d-flex justify-content-center align-items-center">
+            <h1 class="display-3 fw-bold">About Us</h1>
+        </div> 
+   
     </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+
 
     <!-- Featurette -->
     <div class="container">
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
-                        class="text-body-secondary">It’ll blow your mind.</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
-                    prose here.</p>
+                <h2 class="featurette-heading fw-normal lh-1">Who is Maxx Energy? <span
+                        class="text-body-secondary"></span></h2>
+                <p class="lead">Maxx Energy is a leading provider of energy solutions, specializing in power generation,
+                    energy management, and consulting services for businesses, industrial sectors, and government
+                    agencies. With a strong focus on sustainability, the company prioritizes renewable energy sources
+                    and energy efficiency, leveraging advanced technologies like smart grids and data analytics to
+                    optimize energy use and reduce environmental impact. Maxx Energy is committed to delivering
+                    innovative, reliable, and sustainable energy solutions tailored to the diverse needs of its clients.
+                </p>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                <img src="images/PersonLookingAtMonitors.jpeg" width="500" height="500"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
                     preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
+                    fill="var(--bs-secondary-color)" dy=".3em"></text>
                 </svg>
             </div>
         </div>
@@ -89,18 +97,24 @@
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
-                        class="text-body-secondary">See for yourself.</span></h2>
-                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how
-                    this layout would work with some actual real-world content in place.</p>
+                <h2 class="featurette-heading fw-normal lh-1">Our history <span class="text-body-secondary"></span>
+                </h2>
+                <p class="lead">Maxx Energy was founded in 2010 by engineers Harrison Blake and Elena Navarro, who
+                    envisioned revolutionizing the energy industry with sustainable and innovative solutions. Starting
+                    as a small consulting firm in Boulder, Colorado, they quickly gained recognition for their expertise
+                    in energy efficiency and renewable technologies. By 2014, Maxx Energy expanded its offerings to
+                    include power generation and advanced energy management systems, establishing itself as a key player
+                    in the industry. Under the leadership of CEO Harrison Blake and CTO Elena Navarro, the company
+                    forged strategic partnerships, invested in cutting-edge research, and completed significant projects
+                    for industrial clients and government agencies, solidifying its reputation as a leader in delivering
+                    sustainable energy solutions.</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+                <img src="images/PowerPlant.jpeg" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
+                    fill="var(--bs-secondary-color)" dy=".3em"></text>
                 </svg>
             </div>
         </div>
@@ -108,24 +122,70 @@
         <hr class="featurette-divider">
 
         <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
-                        class="text-body-secondary">Checkmate.</span></h2>
-                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
-                    intended to be actually read, simply here to give you a better view of what this would look like
-                    with some actual content. Your content.</p>
+            <div class="col-md-7 mb-5">
+                <h2 class="featurette-heading fw-normal lh-1">Meet our team </h2>
+                <span class="text-body-primary">
+                    <p class="lead">
+                    <div class="mb-3">
+                        <div>
+                            <h5>Monse - Team Lead</h5>
+                            Monse leads our DevOps team with a strong focus on integrating front-end development into
+                            our
+                            DevOps
+                            practices. With her comprehensive understanding of both user experience and system
+                            operations,
+                            she
+                            ensures that our development pipelines are optimized for delivering seamless,
+                            high-performing
+                            front-end solutions. Monse's leadership drives our team to align development and operational
+                            goals,
+                            ensuring a smooth, user-centered experience.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div>
+                            <h5>Kari - DevOps Engineer</h5>
+                            Kari is our front-end DevOps expert, bridging the gap between development and operations
+                            with a
+                            keen
+                            focus on optimizing the user interface and experience. She specializes in streamlining our
+                            workflows
+                            to ensure that front-end components are efficiently deployed and maintained. Kari's
+                            technical
+                            prowess and commitment to enhancing front-end performance are critical to our team's ability
+                            to
+                            deliver high-quality, user-friendly applications.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h5>Samrawit - DevOps Engineer</h5>
+                            Samrawit combines her skills in front-end development and system administration to ensure
+                            our
+                            applications are not only robust but also user-centric. Her expertise in managing cloud
+                            infrastructure and front-end frameworks allows her to implement solutions that are both
+                            scalable and
+                            visually appealing. Samrawit's ability to adapt to new technologies and focus on front-end
+                            optimization makes her an essential part of our team, ensuring that the end-user experience
+                            is
+                            always top-notch.
+                        </div>
+                    </div>
+                    </p>
+                </span>
             </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+
+            <div class="col-md-5 mt-4">
+                <img src="images/People.png" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
+                    fill="var(--bs-secondary-color)" dy=".3em"></text>
                 </svg>
             </div>
         </div>
-        <hr class="featurette-divider">
     </div>
 </main>
 
