@@ -1,5 +1,5 @@
 .img-fluid {
-background-size: auto;
+background-size: cover;
 }
 
 body, html {
@@ -9,7 +9,7 @@ body, html {
 /* The hero image */
 .hero-image {
 /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+background-image: url('PowerPlantLandscape.jpg')
 
 /* Set a specific height */
 height: 50%;
