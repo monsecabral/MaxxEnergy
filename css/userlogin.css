@@ -1,3 +1,8 @@
+body {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+  
+
 /* navbar starts here */
 /* to ensure the navbar stays at the top */
 header {
@@ -38,7 +43,7 @@ header {
 	width: 40px;
 	height: 40px;
 }
-
+h
 
 
 /* footer ends here */
@@ -73,17 +78,7 @@ h2 {
 	text-align: center;
 }
 
-p {
-	font-size: 14px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
-}
 
-span {
-	font-size: 12px;
-}
 
 a {
 	color: #333;
