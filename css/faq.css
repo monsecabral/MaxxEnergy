@@ -63,7 +63,7 @@ details[open] div {
   color: #151313;
   padding: 20px;
   text-align: center;
-  position: relative;
+  position: fixed;
 
 }
 
